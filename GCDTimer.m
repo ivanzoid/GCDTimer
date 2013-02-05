@@ -14,7 +14,7 @@
     dispatch_source_t timer;
 }
 
-- (id) initScheduledTimerWithTimeInterval:(NSTimeInterval)interval repeats:(BOOL)repeats block:(GCDTimerBlock)block queue:(dispatch_queue_t)queue;
+- (id) initScheduledTimerWithTimeInterval:(NSTimeInterval)interval repeats:(BOOL)repeats queue:(dispatch_queue_t)queue block:(GCDTimerBlock)block;
 {
     NSAssert(queue != NULL, @"queue can't be NULL");
 
@@ -44,7 +44,7 @@
 
 - (id) initScheduledTimerWithTimeInterval:(NSTimeInterval)interval repeats:(BOOL)repeats block:(GCDTimerBlock)block
 {
-    return self = [self initScheduledTimerWithTimeInterval:interval repeats:repeats block:block queue:dispatch_get_main_queue()];
+    return self = [self initScheduledTimerWithTimeInterval:interval repeats:repeats queue:dispatch_get_main_queue() block:block];
 }
 
 - (void) dealloc
@@ -58,14 +58,14 @@
     dispatch_source_cancel(timer);
 }
 
-+ (GCDTimer *) scheduledTimerWithTimeInterval:(NSTimeInterval)interval repeats:(BOOL)repeats block:(GCDTimerBlock)block queue:(dispatch_queue_t)queue
++ (GCDTimer *) scheduledTimerWithTimeInterval:(NSTimeInterval)interval repeats:(BOOL)repeats queue:(dispatch_queue_t)queue block:(GCDTimerBlock)block
 {
-    return [[GCDTimer alloc] initScheduledTimerWithTimeInterval:interval repeats:repeats block:block queue:queue];
+    return [[GCDTimer alloc] initScheduledTimerWithTimeInterval:interval repeats:repeats queue:queue block:block];
 }
 
 + (GCDTimer *) scheduledTimerWithTimeInterval:(NSTimeInterval)interval repeats:(BOOL)repeats block:(GCDTimerBlock)block
 {
-    return [self scheduledTimerWithTimeInterval:interval repeats:repeats block:dispatch_get_main_queue()];
+    return [self scheduledTimerWithTimeInterval:interval repeats:repeats queue:dispatch_get_main_queue() block:block];
 }
 
 @end
