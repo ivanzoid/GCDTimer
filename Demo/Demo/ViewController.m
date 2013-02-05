@@ -28,10 +28,8 @@
     [self.view addSubview:label];
 
     timer = [GCDTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^{
-        dispatch_async(dispatch_get_main_queue(), ^{
-            counter++;
-            label.text = [NSString stringWithFormat:@"I'm alive for %d second%@", counter, (counter == 1) ? @"" : @"s"];
-        });
+        counter++;
+        label.text = [NSString stringWithFormat:@"I'm alive for %d second%@", counter, (counter == 1) ? @"" : @"s"];
     }];
 }
 
