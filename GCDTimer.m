@@ -36,8 +36,10 @@
                 dispatch_source_cancel(timer);
             }
         });
-
-        dispatch_resume(timer);
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, interval * NSEC_PER_SEC), queue, ^{
+            dispatch_resume(timer);
+        });
     }
     return self;
 }
