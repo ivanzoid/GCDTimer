@@ -25,6 +25,7 @@
     label.center = self.view.center;
     label.backgroundColor = [UIColor clearColor];
     label.textAlignment = NSTextAlignmentCenter;
+    label.text = @"Hello!";
     [self.view addSubview:label];
 
     timer = [GCDTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^{

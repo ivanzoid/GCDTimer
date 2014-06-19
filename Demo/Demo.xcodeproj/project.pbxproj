@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C22300C1952D4330092EB4E /* GCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C22300B1952D4330092EB4E /* GCDTimer.m */; };
 		2C83191516C1584C000DB203 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C83191416C1584C000DB203 /* UIKit.framework */; };
 		2C83191716C1584C000DB203 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C83191616C1584C000DB203 /* Foundation.framework */; };
 		2C83191916C1584C000DB203 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C83191816C1584C000DB203 /* CoreGraphics.framework */; };
@@ -18,10 +19,11 @@
 		2C83192B16C1584C000DB203 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C83192A16C1584C000DB203 /* Default-568h@2x.png */; };
 		2C83192E16C1584C000DB203 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C83192D16C1584C000DB203 /* ViewController.m */; };
 		2C83193116C1584C000DB203 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C83192F16C1584C000DB203 /* ViewController.xib */; };
-		2C83193916C15862000DB203 /* GCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C83193816C15862000DB203 /* GCDTimer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C22300A1952D4330092EB4E /* GCDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDTimer.h; path = ../Source/GCDTimer.h; sourceTree = "<group>"; };
+		2C22300B1952D4330092EB4E /* GCDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDTimer.m; path = ../Source/GCDTimer.m; sourceTree = "<group>"; };
 		2C83191116C1584C000DB203 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C83191416C1584C000DB203 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2C83191616C1584C000DB203 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -38,8 +40,6 @@
 		2C83192C16C1584C000DB203 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		2C83192D16C1584C000DB203 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2C83193016C1584C000DB203 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
-		2C83193716C15862000DB203 /* GCDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDTimer.h; path = ../GCDTimer.h; sourceTree = "<group>"; };
-		2C83193816C15862000DB203 /* GCDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDTimer.m; path = ../GCDTimer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +114,8 @@
 		2C83193A16C15866000DB203 /* GCDTimer */ = {
 			isa = PBXGroup;
 			children = (
-				2C83193716C15862000DB203 /* GCDTimer.h */,
-				2C83193816C15862000DB203 /* GCDTimer.m */,
+				2C22300A1952D4330092EB4E /* GCDTimer.h */,
+				2C22300B1952D4330092EB4E /* GCDTimer.m */,
 			);
 			name = GCDTimer;
 			sourceTree = "<group>";
@@ -186,10 +186,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C22300C1952D4330092EB4E /* GCDTimer.m in Sources */,
 				2C83192116C1584C000DB203 /* main.m in Sources */,
 				2C83192516C1584C000DB203 /* AppDelegate.m in Sources */,
 				2C83192E16C1584C000DB203 /* ViewController.m in Sources */,
-				2C83193916C15862000DB203 /* GCDTimer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +314,7 @@
 				2C83193616C1584C000DB203 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

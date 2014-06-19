@@ -2,22 +2,15 @@
 //  GCDTimer.h
 //
 
-typedef void(^GCDTimerBlock)(void);
-
 @interface GCDTimer : NSObject
 
-/* block is called on supplied queue */
-- (id) initScheduledTimerWithTimeInterval:(NSTimeInterval)seconds repeats:(BOOL)repeats queue:(dispatch_queue_t)queue block:(GCDTimerBlock)block;
+/// block is called on supplied queue
+- (instancetype) initScheduledTimerWithTimeInterval:(NSTimeInterval)seconds repeats:(BOOL)repeats queue:(dispatch_queue_t)queue block:(dispatch_block_t)block;
++ (instancetype) scheduledTimerWithTimeInterval:(NSTimeInterval)seconds repeats:(BOOL)repeats queue:(dispatch_queue_t)queue block:(dispatch_block_t)block;
 
-/* block is called on main queue */
-- (id) initScheduledTimerWithTimeInterval:(NSTimeInterval)seconds repeats:(BOOL)repeats block:(GCDTimerBlock)block;
-
-/* block is called on supplied queue */
-+ (GCDTimer *) scheduledTimerWithTimeInterval:(NSTimeInterval)seconds repeats:(BOOL)repeats queue:(dispatch_queue_t)queue block:(GCDTimerBlock)block;
-;
-
-/* block is called on main queue */
-+ (GCDTimer *) scheduledTimerWithTimeInterval:(NSTimeInterval)seconds repeats:(BOOL)repeats block:(GCDTimerBlock)block;
+// block is called on main queue
+- (instancetype) initScheduledTimerWithTimeInterval:(NSTimeInterval)seconds repeats:(BOOL)repeats block:(dispatch_block_t)block;
++ (instancetype) scheduledTimerWithTimeInterval:(NSTimeInterval)seconds repeats:(BOOL)repeats block:(dispatch_block_t)block;
 
 - (void) invalidate;
 

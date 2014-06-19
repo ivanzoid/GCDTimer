@@ -4,11 +4,23 @@
 [![License](https://img.shields.io/cocoapods/l/GCDTimer.svg?style=flat)](http://cocoadocs.org/docsets/GCDTimer)
 [![Platform](https://img.shields.io/cocoapods/p/GCDTimer.svg?style=flat)](http://cocoadocs.org/docsets/GCDTimer)
 
+## About
+
+`GCDTimer` is implementation of NSTimer-like class with API close to original, but done on top of Apple's GCD (Grand Central Dispatch).
+
 ## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+You use GCDTimer almost the same as you use NSTimer:
 
-## Requirements
+    GCDTimer *timer;
+
+	...
+
+	timer = [GCDTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^{
+		// Your repeated action here.
+    }];
+
+See demo for more details (you may quickly see demo by using conventient `pod try` command, i.e. `pod try GCDTimer`)
 
 ## Installation
 
@@ -19,7 +31,7 @@ it, simply add the following line to your Podfile:
 
 ## Author
 
-Ivan Zezyulya, ivan@zezyulya.com
+Ivan Zezyulya, GCDTimer@zoid.cc
 
 ## License
 
